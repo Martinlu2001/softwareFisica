@@ -14,6 +14,9 @@ Route::get('perfil', function () {
     return view('perfil');
 });
 
+Route::resource('peticions', App\http\controllers\PeticionController::class);
+Route::resource('equipos', App\http\controllers\EquipoController::class);
+
 Route::get('/temas', 'App\Http\Controllers\TemaController@index')->name('temas.index');
 Route::get('/temas/{name}', 'App\Http\Controllers\TemaController@index1')->name('temas.index1');
 //Route::get('/temas/{name}', 'App\Http\Controllers\TemaController@show')->name('temas.show');
@@ -29,6 +32,8 @@ Route::get('experimentos', function () {
     return view('experimentos');
 });
 
-Route::get('materiales', function () {
-    return view('materiales');
+Route::get('solicitudes', function () {
+    return view('solicitudes');
 });
+
+

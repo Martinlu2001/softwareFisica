@@ -64,7 +64,7 @@ return [
     */
 
     'logo' => '<b>Escuela de fisica</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/atomo.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/atomo.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -326,6 +326,7 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],*/
+/*        
         [
             'text' => 'Home',
             'url' => '/home',
@@ -341,9 +342,38 @@ return [
             'url' => '/experimentos',
             
         ],
+      */  
         [
-            'text' => 'Materiales',
-            'url' => '/materiales',
+            'text' => 'Peticiones',
+            'icon' => 'fas fa-sticky-note',
+            'submenu' => [
+
+                [
+                    'text' => 'Ver Peticiones',
+                    'url' => '/peticions',
+                ],
+
+                [
+                    'text' => 'Crear Peticiones',
+                    'url' => '/peticions/create',
+                ]
+            ]
+        ],
+        [
+            'text' => ' Equipos',
+            'icon' => 'fas fa-box-open',
+            'submenu' => [
+
+                [
+                    'text' => 'Ver Peticiones',
+                    'url' => '/equipos',
+                ],
+
+                [
+                    'text' => 'Crear Peticiones',
+                    'url' => '/equipos/create',
+                ]
+            ]
         ],
         /*[
             'text' => 'pages',
@@ -352,7 +382,9 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],*/
-        ['header' => 'account_settings'],
+
+   /*     
+        ['header' => 'account_settings'],*/
         /*[
             'text' => 'profile',
             'url' => 'admin/settings',
@@ -363,7 +395,7 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],*/
-        [
+        /*[
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
@@ -416,7 +448,7 @@ return [
             'text' => 'information',
             'icon_color' => 'cyan',
             'url' => '#',
-        ],
+        ],*/
     ],
 
     /*
@@ -454,6 +486,27 @@ return [
     */
 
     'plugins' => [
+
+        'TempusDominusBs4' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/moment/moment.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+                ],
+            ],
+        ],
         'Datatables' => [
             'active' => true,
             'files' => [
@@ -474,6 +527,51 @@ return [
                 ],
             ],
         ],
+        'DatatablesPlugins' => [
+    'active' => false,
+    'files' => [
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/buttons/js/dataTables.buttons.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/buttons/js/buttons.bootstrap4.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/buttons/js/buttons.html5.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/buttons/js/buttons.print.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/jszip/jszip.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/pdfmake/pdfmake.min.js',
+        ],
+        [
+            'type' => 'js',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/pdfmake/vfs_fonts.js',
+        ],
+        [
+            'type' => 'css',
+            'asset' => true,
+            'location' => 'vendor/datatables-plugins/buttons/css/buttons.bootstrap4.min.css',
+        ],
+    ],
+],
         'Select2' => [
             'active' => false,
             'files' => [

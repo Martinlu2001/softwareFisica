@@ -1,0 +1,57 @@
+@extends('layouts.app')
+
+@section('template_title')
+    {{ $peticion->name ?? __('Show') . " " . __('Peticion') }}
+@endsection
+
+@section('content')
+    <section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="float-left">
+                            <span class="card-title">{{ __('Show') }} Peticion</span>
+                        </div>
+                        <div class="float-right">
+                            <a class="btn btn-primary btn-sm" href="{{ route('peticions.index') }}"> {{ __('Back') }}</a>
+                        </div>
+                    </div>
+
+                    <div class="card-body bg-white">
+                        
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Name:</strong>
+                                    {{ $peticion->name }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Descripcion:</strong>
+                                    {{ $peticion->descripcion }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Item:</strong>
+                                    {{ $peticion->item }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Cantidad:</strong>
+                                    {{ $peticion->cantidad }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Aprobado:</strong>
+                                    {{ $peticion->aprobado }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Time:</strong>
+                                    {{ $peticion->time }}
+                                </div>
+                                <div class="form-group mb-2 mb20">
+                                    <strong>Date:</strong>
+                                    {{ $peticion->date }}
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
